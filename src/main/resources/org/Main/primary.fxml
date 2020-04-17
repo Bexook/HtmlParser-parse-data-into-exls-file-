@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="542.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Main.Controller">
+    <Pane id="pane" prefHeight="542.0" prefWidth="767.0" style="-fx-background-color: rgba(0,37,37,0.67)" AnchorPane.topAnchor="0.0">
+        <children>
+            <TextField fx:id="url" layoutX="4.0" layoutY="37.0" prefHeight="27.0" prefWidth="509.0" promptText="Input URL of web page" style="   -fx-background-color: rgba(0,37,37,0.67);       -fx-border-style: solid ;          -fx-border-width: 0.3;                  -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <TextField fx:id="nextPage" layoutX="4.0" layoutY="93.0" prefHeight="27.0" prefWidth="93.0" promptText="Next page url" style="  -fx-background-color: rgba(0,37,37,0.67);        -fx-border-style: solid ;          -fx-border-width: 0.3;                   -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <TextField fx:id="pages" layoutX="4.0" layoutY="155.0" prefHeight="27.0" prefWidth="93.0" promptText="Pages" style="  -fx-background-color: rgba(0,37,37,0.67);        -fx-border-style: solid ;          -fx-border-width: 0.3;                 -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <TextArea fx:id="database" layoutX="6.0" layoutY="271.0" prefHeight="200.0" prefWidth="362.0" promptText="DataBase of web pages" style=" -fx-border-width:5;-fx-border-style: solid;-fx-border-color:  rgba(0,37,37,0.67);" />
+            <Button fx:id="start" layoutX="322.0" layoutY="513.0" mnemonicParsing="false" onAction="#startOperation" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #ff4f4c;" text="Start" textFill="WHITE">
+                <font>
+                    <Font name="Arimo Bold" size="12.0" />
+                </font>
+            </Button>
+            <TextField fx:id="nameOfFile" layoutX="3.0" layoutY="481.0" prefHeight="27.0" prefWidth="111.0" promptText="Name  of file" style=" -fx-background-color: rgba(0,37,37,0.67); -fx-border-style: solid ;          -fx-border-width: 0.3;                  -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <TextField fx:id="tagNameData" layoutX="121.0" layoutY="93.0" prefHeight="25.0" prefWidth="111.0" promptText="Tag name" style="  -fx-background-color: rgba(0,37,37,0.67);        -fx-border-style: solid ;          -fx-border-width: 0.3;                 -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <TextField fx:id="tagValueData" layoutX="121.0" layoutY="155.0" prefHeight="25.0" prefWidth="111.0" promptText="Tag value" style="  -fx-background-color: rgba(0,37,37,0.67);        -fx-border-style: solid ;          -fx-border-width: 0.3;                 -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <TextField fx:id="tagNamePrice" layoutX="253.0" layoutY="93.0" prefHeight="25.0" prefWidth="111.0" promptText="Tag price name" style="  -fx-background-color: rgba(0,37,37,0.67);        -fx-border-style: solid ;          -fx-border-width: 0.3;                 -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <TextField fx:id="tagValuePrice" layoutX="253.0" layoutY="155.0" prefHeight="25.0" prefWidth="111.0" promptText="Tag price value" style="  -fx-background-color: rgba(0,37,37,0.67);        -fx-border-style: solid ;          -fx-border-width: 0.3;                 -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+            <Label fx:id="UrlMainERROR" layoutX="6.0" layoutY="64.0" prefHeight="17.0" prefWidth="362.0" />
+            <Label fx:id="NextPageUrlERROR" layoutX="6.0" layoutY="120.0" prefHeight="17.0" prefWidth="93.0" />
+            <Label fx:id="PagesERROR" layoutX="6.0" layoutY="183.0" />
+            <Label fx:id="tagDataNameERROR" layoutX="121.0" layoutY="120.0" prefHeight="17.0" prefWidth="111.0" />
+            <Label fx:id="tagPriceNameERROR" layoutX="255.0" layoutY="120.0" prefHeight="17.0" prefWidth="111.0" />
+            <Label fx:id="tagDataValueERROR" layoutX="121.0" layoutY="183.0" prefHeight="17.0" prefWidth="111.0" />
+            <Label fx:id="tagPriceValueERROR" layoutX="255.0" layoutY="183.0" prefHeight="17.0" prefWidth="111.0" />
+            <Label fx:id="status" layoutX="264.0" layoutY="484.0" prefHeight="21.0" prefWidth="240.0">
+            <font>
+               <Font name="Arimo Bold Italic" size="18.0" />
+            </font></Label>
+         <RadioButton fx:id="filtByName" layoutX="121.0" layoutY="209.0" mnemonicParsing="false" text="Filt by name" />
+         <RadioButton fx:id="filtByPrice" layoutX="253.0" layoutY="209.0" mnemonicParsing="false" text="Filt by price" />
+         <TextArea fx:id="filterKeysTA" layoutX="405.0" layoutY="271.0" prefHeight="200.0" prefWidth="362.0" promptText="Filter keys" style=" -fx-border-width:5;-fx-border-style: solid;-fx-border-color:  rgba(0,37,37,0.67);" />
+         <TextField fx:id="tagNameData3" layoutX="403.0" layoutY="93.0" prefHeight="25.0" prefWidth="111.0" promptText="Tag name" style="   -fx-background-color: rgba(0,37,37,0.67);       -fx-border-style: solid ;          -fx-border-width: 0.3;                  -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+         <TextField fx:id="tagValueData3" layoutX="403.0" layoutY="155.0" prefHeight="25.0" prefWidth="111.0" promptText="Tag value" style="   -fx-background-color: rgba(0,37,37,0.67);       -fx-border-style: solid ;          -fx-border-width: 0.3;                  -fx-border-radius: 0;          -fx-border-color: blue; -fx-text-fill: white" />
+         <Label fx:id="tagNameData3ERROR" layoutX="401.0" layoutY="120.0" />
+         <Label fx:id="tagValueData3ERROR" layoutX="401.0" layoutY="183.0" />
+         <RadioButton fx:id="getUrl" layoutX="403.0" layoutY="209.0" mnemonicParsing="false" text="Get url" />
+        </children>
+    </Pane>
+
+</AnchorPane>
